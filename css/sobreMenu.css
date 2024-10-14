@@ -1,0 +1,154 @@
+body.no-scroll {
+    overflow: hidden;
+}
+
+.saibamais {
+    position: relative;
+    z-index: 5;
+}
+
+.cssbuttons-io-button {
+    background: linear-gradient(to right, #2CAEEC, #2788d2);
+    color: white;
+    font-family: inherit; 
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #232225;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+  }
+  
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #2e82c2;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #1791ca;
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+  
+
+.nav-content {
+    position: fixed;
+    left: -100%;
+    background-color: aliceblue;
+    transition: 700ms ease-in-out;
+
+    width: 100%;
+    height: 60%;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    justify-content: center;
+    padding: 3rem;
+
+   /* From https://css.glass */
+    background: #020b20e9;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgb(6, 47, 100);
+
+    box-shadow:  20px 20px 60px #0f142b,
+             -20px -20px 60px #151c3b;
+}
+
+.nav-content.active {
+    left: 0;
+    bottom: 0;
+}
+
+.nav-content .buttonFechar button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    line-height: 0;
+    padding: .5rem;
+    border: none;
+    background: linear-gradient(to right, #112755, #19224b);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 3rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+.nav-content .buttonFechar button:hover {
+    filter: brightness(1.4);
+}
+
+.nav-content h3 {
+    font-size: 3rem;
+    font-family: var(--Korataki);
+    color: #1791ca;
+    margin-bottom: 1rem;
+}
+
+.nav-content p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #d4d4d4;
+}
+
+@media (min-width: 1080px) {
+    .nav-content {
+        width: 45%;
+        height: 45%;
+        padding: 5rem;
+    }
+
+    .nav-content.active {
+        left: 1.5%;
+        bottom: 3%;
+        border-radius: 3rem;
+    }
+    
+    .nav-content h3 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .nav-content p {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        color: #d4d4d4;
+    }
+}

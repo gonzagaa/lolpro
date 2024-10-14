@@ -1,0 +1,287 @@
+#animacao {
+    overflow: hidden;
+    position: relative;
+    background: var(--bg-black);
+}
+
+#animacao::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10rem;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(255, 0, 0, 0), #000116f4);
+}
+
+#animacao video.desktop {
+    display: none;
+}
+
+#animacao video {
+    width: 130%;
+    position: absolute;
+    top: 0;
+    left: 46%;
+    transform: translate(-50%, 0);
+    mask-image: linear-gradient(to bottom, #fff, transparent 100%);
+    filter: saturate(170%) brightness(1.1);
+}
+
+#animacao .text {
+    position: relative;
+    z-index: 2;
+    margin-top: 40%;
+}
+
+#animacao h2 {
+    color: var(--color-text);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+#animacao h2 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+#animacao p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    background: linear-gradient(to bottom, #fff 0%, #9a9a9a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4rem;
+}
+
+#animacao a button {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+    border: none;
+    font-weight: 600;
+
+    background: var(--gradient);
+    color: #000;
+    animation: gradient 3s ease infinite;
+    background-size: 150% 150%;
+
+    transition: all 200ms ease-in-out;
+
+    font-family: "Space Grotesk", sans-serif;
+}
+
+#animacao a button:hover {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    animation: gradient 2s ease infinite;
+    background-size: 200% 200%;  
+    filter: brightness(1.1);
+}
+
+#animacao .cards {
+    margin-top: 3rem;
+}
+
+#animacao .cards .card {
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(145deg, #060111, #070114);
+    box-shadow:  20px 20px 60px #060110,
+                -20px -20px 60px #0a011b;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    padding-block: 3rem;
+    border-radius: 2rem;
+    border: 1px solid #ffffff59;
+}
+
+#animacao .cards .card span.icon {
+    margin-bottom: 2rem;
+}
+
+#animacao .cards .card span.icon img {
+    width: 5rem;
+}
+
+#animacao .cards .card h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#animacao .cards .card h3 span {
+    font-weight: 800;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#animacao .cards .card p {
+    color: #d1d1d1;
+    font-size: 1.6rem;
+    font-weight: 200;
+    background: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    margin-bottom: 0;
+}
+
+@media (min-width: 1080px) {
+    section#animacao {
+        min-height: 100vh;
+        max-height: 100vh;
+        padding-block: 0;
+    }
+
+    section#animacao video.desktop {
+        display: inherit;
+    }
+
+    section#animacao video.mobile {
+        display: none;
+    }
+
+    section#animacao .video video {
+        left: 50%;
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        mask-image: none;
+        filter: saturate(120%);
+
+        mask-image: linear-gradient(to bottom, #000 80%, transparent);
+    }
+
+    section#animacao::before {
+        display: none;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 35rem;
+        left: 0;
+        z-index: 2;
+        background: linear-gradient(to bottom, rgba(255, 0, 0, 0), #0b0b0b);
+    }
+
+    section#animacao::after {
+
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 35rem;
+        left: 0;
+        z-index: 1;
+        background: linear-gradient(to top, rgba(255, 0, 0, 0), #070113);
+    } 
+
+    section#animacao .text {
+        /* display: none; */
+        position: absolute;
+        left: 15%;
+        top: -67%;
+        bottom: initial;
+        transform: initial;
+    }
+
+    section#animacao h2 {
+        font-size: 6rem;
+
+        text-shadow: 1px 0px 30px rgba(0, 0, 0, 0.367);
+    }
+
+    section#animacao p {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    section#animacao a button {
+        font-size: 2.2rem;
+    }
+
+    section#animacao .cards {
+        margin-top: initial;
+    }
+
+    section#animacao .wrapper .cards .card {
+        backdrop-filter: blur(16px) saturate(100%);
+        -webkit-backdrop-filter: blur(16px) saturate(100%);
+        background: #00000073;
+
+        align-items: center;
+        justify-content: center;
+        padding: 4rem;
+        border-radius: 2rem;
+
+        position: absolute;
+        z-index: 3;
+
+        max-width: 27%;
+
+        padding-top: 5rem;
+
+        border: 3px solid #00000036;
+        box-shadow:  20px 20px 60px #04091544,
+             -20px -20px 60px #05080f99;
+    }
+
+    section#animacao .cards .card span.icon {
+        display: inherit;
+        margin-bottom: 2rem;
+
+        position: absolute;
+        top: -18%;
+
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(0, 1, 2, 0.506);
+        padding: 1.5rem;
+        border-radius: 50%;
+    }
+
+    section#animacao .cards .card span.icon img {
+        width: 4rem;
+    }
+
+    section#animacao .cards .card h3 {
+        font-weight: 700;
+        font-size: 2rem;
+        font-family: var(--RebondLight);
+        text-transform: uppercase;
+    }
+
+    section#animacao .cards .card p {
+        margin-bottom: 0;
+        font-size: 1.6rem;
+        color: #ffffff;
+    }
+
+    section#animacao .cards .card.um {
+        left: 3%;
+        top: 32%;
+    }
+
+    section#animacao .cards .card.dois {
+        left: 33%;
+        top: 32%;
+    }
+
+    section#animacao .cards .card.tres {
+        left: 7%;
+        top: 60%;
+    }
+
+    section#animacao .cards .card.quatro {
+        left: 37%;
+        top: 60%;
+    }
+}

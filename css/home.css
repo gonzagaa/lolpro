@@ -1,0 +1,274 @@
+#home {
+    background: var(--purple-black);
+    height: 100vh;
+    overflow: hidden;
+  
+    position: relative;
+  
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+
+    transition: all 200ms ease-in-out;
+  }
+
+  #home .wrapper {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+  }
+
+  #home .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  #home .circle {
+    position: absolute;
+    bottom: 0;
+    top: 620px;
+    z-index: 13;
+    transition: all 2s;
+  }
+  
+  #home.on .circle {
+    transform: translate(0, -600px);
+  }
+  
+  #home .blush {
+      width: 1000px;
+      height: 1000px;
+      background: radial-gradient(#3c03ae, transparent 50%);
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1;
+      top: -35rem;
+      left: -50rem;
+      opacity: .2;
+  
+      animation: moveblush infinite 4s linear;
+  }
+  
+  #home .blush.dois {
+    background: radial-gradient(#3c03ae, transparent 50%);
+    top: initial;
+    left: initial;
+    bottom: -45rem;
+    right: -60rem;
+  }
+  
+
+  
+  @keyframes Rotation {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  #home img.logo {
+    margin-bottom: 2rem;
+    width: 13rem;
+  }
+  
+  #home h1 {
+    color: var(--color-text);
+    font-weight: 800;
+    font-family: var(--RebondLight);
+    line-height: 1;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+
+    background: #FFFFFF;
+    background: linear-gradient(165deg, #FFFFFF 50%, #04D9B1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 30px #00000017 ;
+  }
+  
+  #home h1 span {
+    font-family: var(--RebondBold);
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-weight: 900;
+  }
+
+  #home p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    background: linear-gradient(to bottom, #ededed 0%, #c6c6c6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+#home .buttons {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+}
+
+#home .buttons a button {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 1.5rem 0 1.5rem;
+  border: none;
+  font-weight: 600;
+
+  transition: all 200ms ease-in-out;
+}
+
+#home .buttons a:nth-child(1) button {
+  background: var(--gradient);
+  color: var(--secondy-color);
+  outline: 2px solid var(--primary-color);
+}
+
+#home .buttons a:nth-child(1) button:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+  box-shadow: 0 0 40px #04d9b278;
+}
+
+#home .buttons a:nth-child(2) button {
+  background: transparent;
+  outline: 1px solid var(--color-text);
+  color: var(--color-text);
+}
+
+#home .buttons a:nth-child(2) button:hover {
+  background: #ffffff24;
+  cursor: pointer;
+}
+
+#home .image video {
+  width: 100%;
+}
+
+#home .image video.mobile {
+  display: none;
+}
+
+#home .image video.desktop {
+      width: 100%;
+      aspect-ratio: 9/17;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      filter: brightness(.6) blur(2px);
+
+      mask-image: linear-gradient(to bottom ,#fff, transparent 99%);
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1080px) {
+    header#home {
+      justify-content: center;
+    }
+
+    header#home .image video.desktop {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      aspect-ratio: 16/9;
+      filter: brightness(.9) blur(2px);
+
+      mask-image: linear-gradient(to left ,#fff, transparent 80%);
+    }
+
+    header#home .image video.mobile {
+      display: none;
+      
+    }
+
+    header#home .content {
+        text-align: center;
+        align-items: center;
+
+         display: grid;
+        grid-template-columns: 1fr; 
+      }
+
+      header#home .text {
+        margin-top: initial;
+      }
+    
+      header#home .circle {
+        top: 820px;
+        width: 100%;
+      }
+
+      header#home .content .text {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 60%;
+
+         text-align: left;
+        align-items: start; 
+      }
+    
+      header#home .content h1 {
+        font-size: 7rem;
+        line-height: 1;
+        mix-blend-mode: difference;
+    
+        margin-bottom: 3rem;
+      }
+    
+      header#home .content p {
+        font-size: 2.2rem;
+        width: 90%;
+      }
+
+      header#home .content .buttons {
+        margin-top: 5rem;
+        gap: 2rem;
+      }
+
+      header#home .content .buttons a button {
+        font-size: 2rem;
+        padding: 1rem 3.5rem;
+      }
+}
+
+@media (min-width: 1400px) {
+  .wrapper {
+    width: min(140rem, 100%);
+  }
+
+  header#home .content h1 {
+    font-size: 9rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  .wrapper {
+    width: min(150rem, 100%);
+  }
+}
+
+@media (min-width: 2000px) {
+  header#home .circle {
+    top: 1080px;
+  }
+}
+
